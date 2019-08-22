@@ -25,14 +25,14 @@ declare module 'redux-query' {
   }
   export type EntitiesState = Entities;
 
-  export enum HttpMethods {
-    DELETE,
-    GET,
-    HEAD,
-    POST,
-    PUT,
-    PATCH,
-  }
+  export type HttpMethods =
+    | 'DELETE'
+    | 'GET'
+    | 'HEAD'
+    | 'POST'
+    | 'PUT'
+    | 'PATCH'
+    | string;
 
   export type TransformStrategy<TEntities = Entities, TBody = ResponseBody> = (
     body: TBody,
